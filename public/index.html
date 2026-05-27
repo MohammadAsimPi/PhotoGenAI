@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo AI — NVIDIA</title>
+    <meta name="description" content="Fast AI image generation and multimodal analysis powered by NVIDIA.">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css?v=1.2">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/" class="active">Text to Image</a>
+            <a href="/swap">Image to Text</a>
+        </nav>
+        <header>
+            <h1>🖼️ Photo Generation AI</h1>
+            <p>Fast image generation</p>
+        </header>
+
+        <div class="content">
+            <div class="prompt-section">
+                <label class="prompt-label" for="promptInput">Describe the image you want to generate:</label>
+                <textarea id="promptInput" class="prompt-input" placeholder="e.g. A futuristic cyberpunk city with neon lights and rain... And Do not use /*\ in prompt"></textarea>
+            </div>
+
+            <div class="error-msg" id="errorMsg"></div>
+
+            <button class="generate-btn" id="generateBtn">
+                <span class="spinner"></span>
+                <span class="btn-text">🚀 Generate Image</span>
+            </button>
+
+            <div class="result-section" id="resultSection">
+                <h3>✨ Result</h3>
+                <img id="resultImage" class="result-image" src="" alt="Generated result">
+                <br>
+                <a id="downloadBtn" class="download-btn" href="#" download="generated-image.png">⬇️ Download Image</a>
+            </div>
+
+            <div class="log" id="log"></div>
+        </div>
+    </div>
+
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

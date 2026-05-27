@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo AI — Multimodal Analysis</title>
+    <meta name="description" content="Multimodal image analysis powered by NVIDIA Qwen 3.5.">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css?v=1.2">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Text to Image</a>
+            <a href="/swap" class="active">Image to Text</a>
+
+        </nav>
+        <header>
+            <h1>🔍 Image Analysis AI</h1>
+            <p>Multimodal image analysis</p>
+        </header>
+
+        <div class="content">
+            <div class="upload-grid" style="grid-template-columns: 1fr;">
+                <div class="upload-box" id="box1">
+                    <input type="file" id="file1" accept="image/*">
+                    <div class="placeholder">
+                        <p><strong>Upload Image</strong></p>
+                        <small>Click to upload a photo for analysis</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prompt-section">
+                <label class="prompt-label" for="promptInput">Analysis Prompt (Optional):</label>
+                <textarea id="promptInput" class="prompt-input">Describe this image in detail.</textarea>
+            </div>
+
+            <div class="error-msg" id="errorMsg"></div>
+
+            <button class="generate-btn" id="generateBtn" disabled>
+                <span class="spinner"></span>
+                <span class="btn-text">🚀 Analyze Image</span>
+            </button>
+
+            <div class="result-section" id="resultSection">
+                <h3>✨ AI Description</h3>
+                <div id="resultText" class="result-text"></div>
+            </div>
+
+            <div class="log" id="log"></div>
+        </div>
+    </div>
+
+    <script src="/js/swap.js" defer></script>
+</body>
+</html>
